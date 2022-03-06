@@ -1,0 +1,27 @@
+gonef = false
+Spawn(function()
+	repeat wait() until not workspace:FindFirstChild("non")
+	if not workspace:FindFirstChild("non") then
+		gonef = true
+	end
+end)
+cddd =false
+mainRemotes = game.ReplicatedStorage
+meleeRemote = mainRemotes['meleeEvent']
+local moo = game.Players.LocalPlayer:GetMouse()
+moo.Button1Down:Connect(function()
+	if workspace:FindFirstChild("non")  and gonef == false then
+		if cddd == false then
+			cddd = true
+			for i,v in pairs(game.Players:GetPlayers()) do
+				if v then
+					meleeRemote:FireServer(v)
+meleeRemote:FireServer(v)
+					print('ded')
+				end
+			end
+			wait(.5)
+			cddd = false
+		end
+	end
+end)
