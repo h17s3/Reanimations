@@ -31,13 +31,10 @@ if getgenv.MovementVelocity == nil then getgenv.MovementVelocity = false end
 if getgenv.R6toR15 == nil then getgenv.R6toR15 = false end
 
 -- // Notification Module
-local notification = loadstring(game:HttpGet("https://gist.githubusercontent.com/CenteredSniper/5aacd41c762304c92802ed4ad714cc98/raw/e8c9b25cb3660028793342728553efdb24e72bec/NotificationService.lua",true))()
+--local notification = loadstring(game:HttpGet("https://gist.githubusercontent.com/CenteredSniper/5aacd41c762304c92802ed4ad714cc98/raw/e8c9b25cb3660028793342728553efdb24e72bec/NotificationService.lua",true))()
 local function notify(title,duration)
 	if getgenv.Notification then
-		notification({
-			Text = title,
-			Duration = duration
-		})
+		
 	end
 end
 
